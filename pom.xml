@@ -147,6 +147,14 @@
       <version>${jacksonVersion}</version>
     </dependency>
 
+    <!-- fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.39</version>
+    </dependency>
+
+
     <!-- log4j配置, 视情况添加-->
     <dependency>
       <groupId>log4j</groupId>

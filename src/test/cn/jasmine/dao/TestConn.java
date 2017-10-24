@@ -2,6 +2,7 @@ package cn.jasmine.dao;
 
 
 import cn.jasmine.entity.admin.Honor;
+import com.alibaba.fastjson.JSON;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,6 +26,15 @@ public class TestConn {
         Criteria criteria = session.createCriteria(Honor.class, "jasmine");
         List list = criteria.list();
         System.out.print(list);
+
+    }
+
+
+    @Test
+    public void  test2(){
+        boolean a = true;
+        Object json = JSON.toJSON(a);
+        System.out.print(json);
 
     }
 
