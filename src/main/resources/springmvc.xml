@@ -23,30 +23,30 @@
     <context:component-scan base-package="cn.jasmine.controller"/>
 
     <!--配置切面-->
-    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
 
     <!--视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="jsp/"/>
+        <property name="prefix" value="WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
     <!--文件上传配置-->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="defaultEncoding" value="${defaultEncoding}"/>
-        <property name="maxUploadSize"  value="${maxUploadSize}"/>
-        <property name="maxInMemorySize" value="${maxInMemorySize}"/>
-        <property name="maxUploadSizePerFile" value="${maxUploadSizePerFile}"/>
-        <property name="uploadTempDir" value="${uploadTempDir}"/>
-        <property name="resolveLazily" value="${resolveLazily}"/>
-        <property name="servletContext" value="${servletContext}"/>
-    </bean>
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+        <!--<property name="defaultEncoding" value="${defaultEncoding}"/>-->
+        <!--<property name="maxUploadSize"  value="${maxUploadSize}"/>-->
+        <!--<property name="maxInMemorySize" value="${maxInMemorySize}"/>-->
+        <!--<property name="maxUploadSizePerFile" value="${maxUploadSizePerFile}"/>-->
+        <!--&lt;!&ndash;<property name="uploadTempDir" value="${uploadTempDir}"/>&ndash;&gt;-->
+        <!--<property name="resolveLazily" value="${resolveLazily}"/>-->
+        <!--<property name="servletContext" value="${servletContext}"/>-->
+    <!--</bean>-->
 
     <!--静态资源-->
-    <mvc:resources mapping="" location=""/>
-    <mvc:resources mapping="" location=""/>
-    <mvc:resources mapping="" location=""/>
+    <!--<mvc:resources mapping="" location=""/>-->
+    <!--<mvc:resources mapping="" location=""/>-->
+    <!--<mvc:resources mapping="" location=""/>-->
 
 
 </beans>
