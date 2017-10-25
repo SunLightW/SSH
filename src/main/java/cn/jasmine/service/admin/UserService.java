@@ -5,6 +5,7 @@ import cn.jasmine.dao.admin.UserDaoImpl;
 import cn.jasmine.entity.admin.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * 用户service
  */
 @Service
+@Transactional
 public class UserService {
 
     @Autowired

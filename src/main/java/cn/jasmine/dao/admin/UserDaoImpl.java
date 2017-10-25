@@ -5,6 +5,7 @@ import cn.jasmine.entity.admin.User;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
@@ -27,8 +28,13 @@ public class UserDaoImpl  implements UserDao{
      */
     public List<User> findUserByUsername(String username) {
         Session session = sessionFactory.getCurrentSession();
+        Transaction tr = session.beginTransaction();
         String sql = "SELECT * FROM user WHERE username = "+username+"";
         List<User> list = session.createSQLQuery(sql).addEntity(User.class).list();
+        tr.commit();
         return list;
     }
+
+
+
 }
